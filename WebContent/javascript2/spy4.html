@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+function fun1(){
+	alert(document.bgColor)
+	document.bgColor="blue";
+}
+function fun2(a){
+	document.fgColor=(a);
+}
+
+</script>
+</head>
+<body>
+<h1>버튼과 라디오 체크로 배경색, 글자색 변경</h1>
+<input type="button" value="배경색 변경" onclick="fun1()">
+<input type="radio" name="col" value="blue" onclick="fun2('blue')"> 파란색
+<input type="radio" name="col" value="pink" onclick="fun2('pink')"> 분홍색
+<input type="radio" name="col" value="purple" onclick="fun2('purple')"> 보라색
+</body>
+</html>

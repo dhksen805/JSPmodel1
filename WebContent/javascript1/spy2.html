@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+// 	a=confirm("회원가입 하시겠습니까?");
+	
+// 	if(a){							[가입	확인/취소]
+// 		alert("가입을 환영합니다");
+// 	}else{
+// 		alert("가입을 취소하셨습니다");
+// 	}
+
+//prompt 이용해 값을 입력받기
+
+// a=prompt("값을 입력하세요","입력하는곳") // 입력 팝업생성
+// 	alert(a);
+// alert(parseInt(a)+300); // 문자를 정수로 바꿔줌
+// alert(a*10);
+
+// isNaN() is Not a Number 숫자가 아니냐? true 문자 false 숫자
+// if(isNaN(a)){
+// 	alert("문자를 입력하셨습니다.");
+// }else{
+// 	alert("숫자를 입력하셨습니다.");
+// }
+
+//prompt() isNaN() parseInt() if      ]
+//값을 입력 받아서					      ]
+//문자이면 받은값 그대로 출력			      ]
+//숫자이면 받은값에 +100 해서 출력		      ]
+								    //]
+// a=prompt("값을입력하세요")			//]          << 팝업활용
+// if(isNaN(a)){					//]
+// 	alert(a);					    //]
+// }else{                           //]
+// 	alert(parseInt(a)+100);         //]
+// }                                //]
+
+
+
+//prompt() isNaN() parseInt() if  ]
+//값을 입력 받아서					  ]
+//문자이면 받은값 그대로 출력			  ]
+//숫자이면 받은값에 +100 해서 출력		  ]
+function fun1(){				//]
+a=prompt("값을입력하세요","문자나 숫자를 입력해주세요")	//]      << 버튼활용
+if(isNaN(a)){					//]
+	alert(a);					//]
+}else{                          //]
+	alert(parseInt(a)+100);     //]
+}               				//]
+}                               //]
+
+
+
+</script>
+</head>
+<body>
+<h1>if문 연습</h1>
+<input type="button" value="입력" onclick="fun1()">
+
+</body>
+</html>

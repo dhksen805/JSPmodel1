@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>성필영</title>
+<script type="text/javascript">
+//웹브라우저 내장 객체
+//객체들의 계층구조
+//window - location
+//		- history
+//		- document - image, link, layer, ....
+//				   - from - text, password, textarea
+//				   		  - checkbox, radio
+//				   		  - select  - option
+
+// window.document.변수			document.title 문서 제목 저장하는 변수
+// 								document.bgColor 문서 배경색을 저장하는 변수
+//								document.fgColor 문서 글자색을 저장하는변수
+//								document.linkColor 문서 하이퍼링크색을 저장하는변수
+// window.document.함수()			document.open() 문서를 열어주는 함수
+//								document.close() 문서를 닫아주는 함수
+//								document.writeln() 문서에 글쓰기
+function fun1(){
+	//문서제목 메시지 출력
+	alert(document.title);
+	//문서제목 변경
+	document.title="전재원";
+	alert(document.title);
+	document.title="뷔페"
+	
+}
+function fun2(){
+	//문서배경색 출력
+	alert(document.bgColor);
+	//문서배경색 변경 "yellow" "green"
+	document.bgColor="pink";
+}
+function fun3(a){
+	document.fgColor=(a);
+}
+
+document.writeln("문서내용쓰기");
+
+
+</script>
+</head>
+<body>
+<h1>WebContent/js2/test1.html</h1>
+<input type="button" value="문서제목확인" onclick="fun1()">
+<input type="button" value="문서배경색확인" onclick="fun2()">
+<input type="checkbox" name="col" value="green" onclick="fun3(value)"> 초록색
+<input type="radio" name="col" value="yellow" onclick="fun3('yellow')"> 노란색
+<input type="radio" name="col" value="pink" onclick="fun3('pink')"> 분홍색
+</body>
+</html>

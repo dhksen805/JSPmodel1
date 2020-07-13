@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//웹브라우저 내장 객체
+//객체들의 계층구조
+//window - location
+//	   	- history
+//	  	- document - image, link, layer, ....
+//	 			   - from - text, password, textarea
+//	 			   		  - checkbox, radio
+//	 			   		  - select  - option
+
+// window.document.images[0].변수			document.images[0].src
+// 										document.images[0].name
+// 										document.images[0].width
+// 										document.images[0].height
+// 										document.images[0].border
+// window.document.images[0].함수()
+
+// window.document.이미지이름.변수			document.img1.src
+// 										document.img1.name
+// 										document.img1.width
+// 										document.img1.height
+// 										document.img1.border
+// window.document.images[0].함수()
+
+function fun1(){
+// 	alert(document.images[0].src);
+	alert(document.찬밥.src);
+	alert(document.찬밥.name);
+	alert(document.찬밥.width);
+	alert(document.찬밥.height);
+	alert(document.찬밥.border);
+}
+function fun2(){
+	//첫번째 이미지를 2.jpg로 변경
+	document.찬밥.src="2.jpg"
+	// 테두리 변경 20
+	document.찬밥.border="20"
+}
+function fun3(){
+	//두번쨰 이미지
+	document.따뜻한밥.src="3.jpg"
+	//테두리 변경 10
+	document.따뜻한밥.border="10"
+	//너비 300
+	document.따뜻한밥.width="300"
+	//높이 200
+	document.따뜻한밥.height="200"
+}
+function fun4(){
+	//세번째 이미지 src 4.jpg 변경
+	document.img3.src="4.jpg"
+}
+function fun5(){
+	//세번쨰 이미지 src 3.jpg 변경
+	document.img3.src="3.jpg"
+}
+
+</script>
+</head>
+<body>
+<h1>WebContent/js2/test2.html</h1>
+<img src="1.jpg" name="찬밥" width="500" height="400" border="3">
+<input type="button" value="첫번째이미지정보" onclick="fun1()">
+<input type="button" value="첫번째이미지변경" onclick="fun2()">
+
+<img src="2.jpg" name="따뜻한밥" width="500" height="400" border="3" onclick="fun3()">
+<img src="3.jpg" name="img3" width="500" height="400" border="3" onmouseover="fun4()" onmouseout="fun5()">
+
+
+
+
+</body>
+</html>

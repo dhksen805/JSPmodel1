@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function fun1() {
+	alert("호출");
+}
+function fun2(a,b){
+	alert(a+b);
+}
+function fun3(a,b,c){
+	return a+b+c;
+}
+function fun4(d,f,g){
+	return d*f*g;
+}
+function fun5(q,w){
+	alert(q*w);
+}
+function zpk(z){
+	alert("금액:"+z);
+	return "음료수";
+}
+</script>
+</head>
+<body>
+<h2>html 버튼 ,리턴 연습</h2>
+
+<input type="button" value="버튼1" onclick="fun1()">
+<input type="button" value="두수의 합" onclick="fun2(10,20)">
+<input type="button" value="세수의 평균" onclick="alert(fun3(10,20,30)/3)">
+<input type="button" value="세 곱의 평균" onclick="alert(fun4(2,3,4)/3)">
+<input type="button" value="두수의 곱" onclick="fun5(4,5)">
+<input type="button" value="자판기" onclick="alert(zpk(800))">
+
+
+
+
+</body>
+</html>

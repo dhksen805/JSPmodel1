@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function fun1(){
+	alert("함수1메시지 출력");
+	// 함수 이름 호출한 곳으로 되돌아감
+	return;
+}
+function fun2(m){
+	alert(m);
+	alert("함수2메시지 출력");
+	return;	
+}
+function fun2_1(a,b){
+	alert(a+b)
+	alert(a-b)
+	return;
+	alert(a*b)
+	alert(a/b)
+	return;
+}
+function fun3(x){
+	alert("받은동전:"+x)
+	return "음료수";
+}
+</script>
+</head>
+<body>
+<h1>WebContent/js1/test4.html</h1>
+<input type="button" value="함수1호출" onclick="fun1()">
+<input type="button" value="함수2호출" onclick="fun2(500)">
+<input type="button" value="함수2_1호출" onclick="fun2_1(10,20)">
+<input type="button" value="함수3호출" onclick="alert(fun3(500))">
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+// 웹브라우저 내장 객체
+// 객체들의 계층구조
+// window - location
+// 		- history
+// 		- document - image, link, layer, ....
+// 				   - from - text, password, textarea
+// 				   		  - checkbox, radio
+// 				   		  - select  - option
+
+// window 생략가능
+// window.location.변수		***location.href 주소줄에 있는 주소를 저장하는 변수***
+//							location.protocol 주소에 있는 통신규약	http
+//							location.hostname 주소에 있는 호스트이름	localhost
+//							location.port 주소에 있는 포트번호
+//							location.host 주소에서 있는 호스트이름+포트번호
+// window.lacation.함수()		location.reload()	주소 새로고침
+//							location.replace()	새로운 문서를 불러옴
+
+
+function fun1(){
+// 	a="test8.html"
+// 	alert(a)
+	alert(location.href);
+	alert(location.protocol);
+	alert(location.hostname);
+	alert(location.port);
+	alert(location.host);
+}
+
+function fun2(){
+	// 주소줄을 test7.html 변경
+	// href 변수의 내용을 test7.html로 변경
+// 	a="test7.html"
+// 	alert(a);
+	alert("test7.html로 이동");
+	location.href="test7.html";
+}
+function fun3(){
+	//새로고침 F5
+	location.reload();
+}
+function fun4(){
+	// 기존문서는 사라지고 새롭게 문서를 불러옴
+	location.replace("test7.html");
+}
+</script>
+</head>
+<body>
+<h1>WebContent/js1/test8.html</h1>
+<a href="test7.html">test7.html이동</a>
+<input type="button" value="주소줄내용" onclick="fun1()">
+<input type="button" value="주소줄 내용 변경이동" onclick="fun2()">
+<input type="button" value="새로고침" onclick="fun3()">
+<input type="button" value="주소줄에 문서 새로 불러옴" onclick="fun4()">
+
+
+
+</body>
+</html>

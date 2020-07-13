@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//웹브라우저 내장 객체
+//객체들의 계층구조
+//window - location
+//	   	- history
+//	  	- document - image, link, layer, ....
+//	 			   - from - text, password, textarea
+//	 			   		  - checkbox, radio
+//	 			   		  - select  - option
+
+// window.document.폼이름.체크박스이름[0].변수		document.fr.ch[0].type
+// 												document.fr.ch[0].name
+// 												document.fr.ch[0].value
+// 												document.fr.ch[0].checked
+// 						첫번째 체크박스 체크가 되어있으면 true / 되어있지 않으면 false
+
+// window.document.폼이름.체크박수이름[0].함수()		document.fr.ch[0].focus()
+// 												document.fr.ch[0].blur()
+// 												document.fr.ch[0].click()
+
+function fun1(){
+	alert(document.fr.ch[0].type);
+	alert(document.fr.ch[0].name);
+	alert(document.fr.ch[0].value);
+	alert(document.fr.ch[0].checked);
+	document.fr.ch[0].focus(); // 포커스
+	document.fr.ch[0].blur(); // 포커스 해제
+	document.fr.ch[0].click(); // 클릭 체크
+}
+
+function fun2(){
+	if(document.fr.ch[0].checked == false && document.fr.ch[1].checked == false){
+		alert("체크박스 체크하세요");
+		document.fr.ch[0].focus();
+		return;
+}if(document.fr.ra[0].checked == false && document.fr.ra[1].checked == false){
+	alert("라디오 박스 체크하세요");
+	document.fr.ra[0].focus();
+	return;
+}
+document.fr.submit();
+}
+
+</script>
+</head>
+<body>
+<h1>WebContent/js2/test6.html</h1>
+
+<form action="a.jsp" method="get" name="fr">
+여러개 선택하세요 : <input type="checkbox" name="ch" value="여행">여행
+			   <input type="checkbox" name="ch" value="게임">게임<br>
+하나 선택하세요 : <input type="radio" name="ra" value="남">남
+			 <input type="radio" name="ra" value="여">여<br>
+<input type="button" value="체크박스정보" onclick="fun1()">
+<input type="button" value="체크박스제어" onclick="fun2()">
+
+
+</form>
+</body>
+</html>

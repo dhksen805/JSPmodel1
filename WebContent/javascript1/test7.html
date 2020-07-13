@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+ // 웹브라우저 내장 객체
+ // 객체들의 계층구조
+//  window - location
+//  		- history
+//  		- document - image, link, layer, ....
+//  				   - from - text, password, textarea
+//  				   		  - checkbox, radio
+//  				   		  - select  - option
+
+// window 내장객체 - 웹브라우저 창 주제
+// window.변수	window.status 상태표시줄의 정보를 저장 window.opener 창을 열게해준 페이지 정보저장
+// window.함수()	window.open() << 창열기        window.close()  << 창닫기
+function fun1(){
+// 	 window.open("열고자하는 주소,사이트주소,파일이름","창이름,생략가능","창크기,창위치,옵션사항");
+	 window.open("http://www.naver.com","창이름,생략가능","width=300,height=200,left=100,top=100,scrollbars=yes,resizable=yes");
+ }
+ function fun2(){
+	 window.close();
+ }
+function fun3(){
+	//test5.html문서를 창으로열기
+	window.open("test5.html","","width=500,height=500,left=300,top=300,scrollbars=yes,resizable=yes");
+}
+function fun4(){
+	//test7_w.html 문서만들기 => 문서 안에 창닫기 버튼 만들기
+	//test7_w.html 문서 창열기
+	window.open("test7_w.html","","width=500,height=500,scrollbars=yes")
+}
+
+
+</script>
+</head>
+<body>
+<h1>WebContent/js1/test7.html</h1>
+<input type="button" value="창열기1" onclick="fun1()">
+<input type="button" value="창닫기1" onclick="fun2()">
+<input type="button" value="창열기2" onclick="fun3()">
+<input type="button" value="창열기3" onclick="fun4()">
+
+</body>
+</html>

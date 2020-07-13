@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+function fun1(a){
+	if(a=='yes'){
+		document.spy.action = "gosite.jsp";
+	}else{
+		document.spy.action = "backsite.jsp";
+	}
+	document.spy.submit();
+}
+
+
+
+</script>
+</head>
+<body>
+
+<form action="spy.jsp" method="post" name="spy">
+<input type="button" value="18세 이상" onclick="fun1('yes')">
+<input type="button" value="18세 이하" onclick="fun1('no')">
+
+</form>
+
+
+
+
+<h1>폼 연습</h1>
+</body>
+</html>

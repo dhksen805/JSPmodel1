@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//웹브라우저 내장 객체
+//객체들의 계층구조
+//window - location
+//	   	- history
+//	  	- document - image, link, layer, ....
+//	 			   - form - text, password, textarea
+//	 			   		  - checkbox, radio
+//	 			   		  - select  - option
+
+
+// window.document.폼이름.텍스트상자이름.변수			document.fr1.id.type
+// 												document.fr1.id.name
+// 												document.fr1.id.value
+
+// window.document.폼이름.텍스트상자이름.함수()		document.fr1.id.focus()
+// 												document.fr1.id.blur()
+// 												document.fr1.id.select()
+
+
+function fun1(){
+	alert(document.fr1.id.type);
+	alert(document.fr1.id.name);
+	alert(document.fr1.id.value);
+}
+
+function fun2(){
+	// 아이디 텍스트 상자 안에 value값 저장
+	document.fr1.id.value="상자";
+	// 아이디 텍스트 상자 안에 커서 넣기 포커스(), 포커스(), 활성화
+	document.fr1.id.focus();
+	// 커서 사라짐 / 포커스 해제
+	document.fr1.id.blur();
+ 	//아이디 텍스트 상자 안에 글자 블럭설정
+	document.fr1.id.select();
+
+}
+
+//else if 또는 return 각항마다 사용
+function fun3(){
+	// 아이디 텍스트 상자 글자수
+	// 내장객체 문자열내장객체 문자열.변수 / 문자열.함수()
+	// 문자열의 길이 문자열.length
+// 	alert(document.fr1.id.value.length);
+
+	
+	// 아이디 텍스트 상자가 비어있으면 / 아이디 텍스트 상자에 value값이 없으면 ""
+	// 아이디 텍스트 상자의 value 값의 길이가 0하고 같은경우
+// 	if(document.fr1.id.value.length==0){
+// 		// 메시지 "아이디 입력하세요"
+// 		alert("아이디 입력하세요.");
+// 		// 아이디 상자 포커스, 커서 보이기
+// 		document.fr1.id.focus();
+// 		//함수 호출한 곳으로 되돌아감
+// 		return;
+// 	}
+		// 아이디 텍스트 상자의 value값 길이가 5자가 아닌 경우 !=
+	if(document.fr1.id.value.length!=5){
+		// 아이디 5자입니다.
+		alert("아이디 5자리를 입력하세요.");
+		// 아이디 상자 포커스
+		document.fr1.id.focus();
+		return;
+	}
+// 	// 아이디 텍스트 상자가 비어있으면 / 아이디 텍스트 상자에 value값이 없으면 ""
+// 	if(document.fr1.id.value==""){
+// 		// 메시지 "아이디 입력하세요"
+// 		alert("아이디 입력하세요.");
+// 		// 아이디 상자 포커스, 커서 보이기
+// 		document.fr1.id.focus();
+// 		//함수 호출한 곳으로 되돌아감
+// 		return;
+// 	} 
+	// 비밀번호 길이 4~7이 아니면 "비밀번호 4~7자입니다." 포커스 되돌아감
+	// 조건1. 4자보다 작은 경우 또는 7자보다 큰경우
+	// 조건2. !(4자보다 크거나 같은 경우이고 7자보다 작거나 같은경우)
+// 		if(document.fr1.pass.value.length<4 || document.fr1.pass.value.length>7){
+// 		alert("비밀번호 4~7자리를 입력해주세요.");				
+// 		document.fr1.pass.focus();
+// 		return;
+// 	}
+	
+		if(document.fr1.pass.value.length>=4 && document.fr1.pass.value.length<=7){
+			alert("비밀번호 4~7자리를 입력해주세요.");				
+			document.fr1.pass.focus();
+			return;
+		}
+// 	if(document.fr1.pass.value==""){
+// 		alert("비밀번호 입력하세요.");				
+// 		document.fr1.pass.focus();
+// 		return;
+// 	} 
+	if(document.fr1.intro.value==""){
+		alert("자기소개 입력하세요.");
+		document.fr1.intro.focus();
+		return;
+	}
+		alert("입력 되어있습니다.");
+		document.fr1.id.select();
+		// a.jsp 전송
+		document.fr1.submit();
+		return;
+	
+}
+
+
+
+
+</script>
+</head>
+<body>
+<h1>WebContent/js2/test5.html</h1>
+<form action="a.jsp" method="get" name="fr1">
+아이디 : <input type="text" name="id" value=""><br>
+비밀번호 : <input type="password" name="pass" value=""><br>
+자기소개 : <textarea name="intro" rows="3" cols="10"></textarea><br>
+<input type="button" value="아이디상자정보" onclick="fun1()">
+<input type="button" value="아이디상자value넣기" onclick="fun2()">
+<input type="button" value="텍스트 상자 제어하기" onclick="fun3()">
+
+</form>
+</body>
+</html>

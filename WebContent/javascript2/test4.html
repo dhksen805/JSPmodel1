@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//웹브라우저 내장 객체
+//객체들의 계층구조
+//window - location
+//	   	- history
+//	  	- document - image, link, layer, ....
+//	 			   - form - text, password, textarea
+//	 			   		  - checkbox, radio
+//	 			   		  - select  - option
+
+
+// window.document.forms[0].변수		document.forms[0].action
+// 									document.forms[0].method
+// 									document.forms[0].name
+// window.document.forms[0].함수()	document.forms[0].submit()
+// 									document.forms[0].reset()
+
+// window.document.폼이름.변수			document.fr1.action
+// 									document.fr1.method
+// 									document.fr1.name
+// window.document.폼이름.함수()
+
+
+function fun1(){
+	alert(document.fr1.action);
+	alert(document.fr1.method);
+	alert(document.fr1.name);
+}
+function fun2(){
+	// 요정페이지 이동 action b.jsp 변경
+	document.fr1.action = "b.jsp"
+	// 전송방식 method "post" 변경
+	document.fr1.method = "post"
+	// 폼안에 내용을 가지고 action 변수에 안에 있는 페이지를 서버에 요청하러감
+	document.fr1.submit();
+}
+function fun3(a){
+	// basket값을 받으면 basket.jsp 이동 action
+	// order값을 받으면 order.jsp 이동 action
+	if(a=='basket'){
+		document.fr1.action = "basket.jsp";
+// 	}else if(a=='order'){
+// 		document.fr1.action = "order.jsp";
+	}else{
+		document.fr1.action = "order.jsp";
+
+	}
+	// 폼안에 내용을 가지고 action 변수에 안에 있는 페이지를 서버에 요청하러감
+	document.fr1.submit();
+}
+
+
+
+</script>
+</head>
+<body>
+<h1>WebContent/js2/test4.html</h1>
+
+<form action="a.jsp" method="get" name="fr1">
+<input type="text" name="id"><br>
+<input type="button" value="폼정보" onclick="fun1()">
+<input type="button" value="폼정보변경" onclick="fun2()">
+<input type="button" value="장바구니이동" onclick="fun3('basket')">
+<input type="button" value="바로구매" onclick="fun3('order')">
+
+
+
+</form>
+
+</body>
+</html>

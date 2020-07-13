@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//내장함수
+// function alert(a) {
+// 	//경고창 만들고
+// 	//경고창에 a변수에 저장된 내용 출력
+	
+// }
+// 호출
+// alert("메시지출력");
+
+// 확인 true 취소 false
+// a=confirm("선택하세요");
+// alert(a);
+
+// 두개 중에 하나를 선택 => 조건문 if
+// if(a==true){
+// 	//조건이 true일때 실행명령문
+// 	alert("확인을 선택하셨네요");
+// }else{
+// 	//조건이 false일때 실행명령문
+// 	alert("취소를 선택하셨네요");
+// }
+
+//	confirm 회원가입
+// 확인 - 회원가입 축하합니다.
+// 취소 - 다음에 방문해 주세요.
+// a=confirm("회원가입");
+// if(a==true){
+// 	alert("회원가입 축하합니다.")
+// }else{
+// 	alert("다음에 방문해 주세요.")
+// }
+
+//값을 입력받기
+// a=prompt("값을 입력하세요","입력하는곳")
+// alert(a);
+// alert(a+100);//숫자 더하기,문자 이어붙이기 = 문자 더하기가 동작한다.
+// // 문자를 숫자로 변경하는 함수 parseInt()
+// alert(parseInt(a)+100); // 문자화된 숫자a를 정수형으로 변경
+// alert(parseFloat(a)+100);// 연산에서 소수점표기
+// alert(a*100);//곱하기
+// isNaN() is Not a Number 숫자가 아니냐? true 문자 false 숫자
+// alert(isNaN(a))
+// if "문자입력" "숫자입력" 구분
+// if(isNaN(a)){
+// 	alert("문자입력");
+// }else{
+// 	alert("숫자입력");
+// }
+
+// prompt() isNaN() parseInt() if 
+// 값을 입력 받아서
+// 문자이면 받은값 그대로 출력
+// 숫자이면 받은값에 +100 해서 출력
+
+// function fun1(){
+// a=prompt("값을입력하세요","입력하는곳")
+// if(isNaN(a)){
+// 	alert(a);
+// }else{
+// 	alert(parseInt(a)+100);
+// 	}
+// }
+</script>
+</head>
+<body>
+<h1>WebContent/js1/test6.html</h1>
+<input type="button" value="확인" onclick="fun1()">
+
+
+
+</body>
+</html>

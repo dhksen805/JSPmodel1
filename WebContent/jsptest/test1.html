@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function check(){
+	if(document.spy.name.value==""){
+		alert("이름을 입력해주세요");
+		document.spy.name.focus();
+		return false;
+	}if(document.spy.jm.value==""){
+		alert("주민등록번호를 입력해주세요");
+		document.spy.jm.focus();
+		return false;
+	}if(document.spy.jm1.value==""){
+		alert("주민등록번호를 입력해주세요");
+		document.spy.jm1.focus();
+		return false;
+	}if(document.spy.id.value==""){
+		alert("아이디를 입력해주세요");
+		document.spy.id.focus();
+		return false;
+	}if(document.spy.id.value.length<4 || document.spy.id.value.length>10){
+		alert("아이디는 4~10자리로 입력해주세요");
+		document.spy.id.focus();
+		return false;
+	}if(document.spy.pw.value==""){
+		alert("비밀번호를 입력해주세요");
+		document.spy.pw.focus();
+		return false;
+	}if(document.spy.pw.value.length<4 || document.spy.pw.value.length>10){
+		alert("비밀번호는 4~10자리로 입력해주세요");
+		document.spy.pw.focus();
+		return false;
+	}if(document.spy.pw1.value==""){
+		alert("비밀번호를 확인해주세요");
+		document.spy.pw1.focus();
+		return false;
+	}if(document.spy.pw1.value!= document.spy.pw.value){
+		alert("비밀번호가 일치하지 않습니다");
+		document.spy.pw1.focus();
+		return false;
+	}if(document.spy.call.value==""){
+		alert("전화번호를 입력해주세요");
+		document.spy.call.focus();
+		return false;
+	}if(document.spy.gen.options[0].selected){
+		alert("회원분류를 선택해주세요");
+		document.spy.gen.focus();
+		return false;
+	}
+}
+
+function fun1(){
+	if(document.spy.id.value.length>=4 && document.spy.id.value.length<=10){
+		alert("중복확인완료");
+	}else{
+		alert("아이디는 4~10자리로 입력해주세요")
+	}
+}
+
+function fun2(){
+	window.open("test2.html","","width=500,height=500,left=300,top=300,scrollbars=yes,resizable=yes");
+}
+
+
+</script>
+<style>
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+
+.center {
+  text-align: center;
+  border: 3px solid green;
+}
+</style>
+</head>
+<body>
+<form action="a.jsp" method="post" name="spy"  onsubmit="return check()"><br>
+<img src="1.png" name="a" width="15" height="15">표시는 반드시 입력하셔야합니다.<br>
+<img src="1.png" name="a" width="15" height="15">이름 <input type="text" name="name"><br>
+<br>
+<img src="1.png" name="a" width="15" height="15">주민등록번호 <input type="text" name="jm" maxlength="6" style="width:80px"> - <input type="password" name="jm1" maxlength="7" style="width:100px"><br>
+<img src="1.png" name="a" width="15" height="15">회원 ID <input type="text" name="id">   <input type="button" name="jb" value="중복확인" onclick="fun1()"><br>
+<br>
+<img src="1.png" name="a" width="15" height="15">비밀번호 <input type="password" name="pw"><br>
+<img src="1.png" name="a" width="15" height="15">비밀번호확인 <input type="password" name="pw1"><br><br>
+E-mail <input type="text" name="e-mail" style="width:300px"><br><br>
+<img src="1.png" name="a" width="15" height="15">전화번호 <input type="text" name="call"><br>
+핸드폰번호 <input type="text" name="phone"><br><br>
+우편번호 <input type="text" name="add" style="width:50px" > - <input type="text" name="add" style="width:50px">  
+<input type="button" name="add2" value="검색" onclick="fun2()"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" name="add1" style="width:360px"><br>
+상세주소 <input type="text" name="add3" style="width:360px"><br><br>
+<img src="1.png" name="a" width="15" height="15">회원분류 <select name="gen">
+<option value="">선택해주세요</option>
+<option value="kor">내국인</option>
+<option value="for">외국인</option>
+</select><br>
+<input type="submit" value="가입">&nbsp;<input type="reset" value="취소">
+
+</form>
+</body>
+</html>

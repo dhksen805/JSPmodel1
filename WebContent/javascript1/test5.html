@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+// fun1() 함수 정의 메시지 출력 "안녕 javascript"
+function fun1(){
+	alert("안녕 javascript");
+}
+//fun2() 함수 정의 두수를 받아서 합을 구해서 출력
+function fun2(a,b){
+	alert(a+b);
+}
+//fun3() 함수 정의 세개의 수를 받아서 합을 구해서 리턴
+function fun3(d,e,f){
+	return d+e+f;
+}
+//fun4() 함수 정의 두수를 받아서 두수의 곱을 구해서 리턴
+function fun4(g,h){
+	return g*h;
+}
+</script>
+</head>
+<body>
+<h1>WebContent/js1/test5.html</h1>
+<input type="button" value="출력" onclick="fun1()">
+<input type="button" value="합구하기" onclick="fun2(78,20)">
+<input type="button" value="세수합리턴" onclick="alert(fun3(10,30,28))">
+<input type="button" value="세수평균" onclick="alert(fun3(10,30,28)/3)">
+<input type="button" value="곱리턴" onclick="alert(fun4(2,9)/2)">
+<input type="button" value="삼각형 면적 구하기" onclick="alert(fun4(5,10)/2)">
+
+</body>
+</html>
